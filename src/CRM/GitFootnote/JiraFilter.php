@@ -28,7 +28,7 @@ class JiraFilter extends AbstractWordFilter {
       } else {
         $title = $word . ':';
       }
-      $message->addLinkNote($this->url . '/' . $word, $title);
+      $message->addLinkNote($this->url . '/browse/' . $word, $title);
     }
     return $word;
   }
