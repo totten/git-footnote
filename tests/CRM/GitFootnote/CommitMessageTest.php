@@ -20,8 +20,8 @@ class CommitMessageTest extends \PHPUnit_Framework_TestCase {
 world
 
 ----------------------------------------
- * Example
-   http://example.com
+* Example
+  http://example.com
 ", $message->toString());
   }
 
@@ -33,7 +33,7 @@ world
 world
 
 ----------------------------------------
- * http://example.com
+* http://example.com
 ", $message->toString());
   }
 
@@ -47,10 +47,10 @@ world
 world
 
 ----------------------------------------
- * Example
-   http://example.com
- * Example For Good
-   http://example.org
+* Example
+  http://example.com
+* Example For Good
+  http://example.org
 ", $message->toString());
   }
 }

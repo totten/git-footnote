@@ -26,7 +26,7 @@ class CommitMessage {
   public function addLinkNote($url, $text = NULL) {
     if (! isset($this->notes[$url])) {
       if ($text) {
-        $this->notes[$url] = sprintf("%s\n   %s", $text, $url);
+        $this->notes[$url] = sprintf("%s\n  %s", $text, $url);
       } else {
         $this->notes[$url] = $url;
       }
@@ -51,7 +51,7 @@ class CommitMessage {
     if (!empty($this->notes)) {
       $s .= "\n\n----------------------------------------\n";
       foreach ($this->notes as $note) {
-        $s .= " * ";
+        $s .= "* ";
         $s .= $note;
         $s .= "\n";
       }
