@@ -2,7 +2,7 @@
     "name": "totten/git-footnote",
     "description": "Git hook for generating footnotes",
     "homepage": "https://github.com/totten/git-footnote",
-    "license": "BSD-2-Clause",
+    "license": "LGPL-3.0+",
     "repositories": {
         "jira-api-restclient-unofficial": {
             "type": "package",
