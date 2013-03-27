@@ -24,9 +24,9 @@ class JiraFilter extends AbstractWordFilter {
     if (preg_match($this->wordPattern, $word)) {
       $issue = $this->getIssue($word);
       if ($issue) {
-        $title = $issue->getSummary();
+        $title = $word . ': ' . $issue->getSummary();
       } else {
-        $title = NULL;
+        $title = $word . ':';
       }
       $message->addLinkNote($this->url . '/' . $word, $title);
     }
