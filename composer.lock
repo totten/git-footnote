@@ -1,0 +1,31 @@
+{
+    "hash": "e2a09313e12a4ba8cc6b74e7306c0c04",
+    "packages": [
+        {
+            "name": "totten/jira-api-restclient",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "git://github.com/totten/jira-api-restclient.git",
+                "reference": "origin/master"
+            },
+            "type": "library"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": {
+        "php": ">=5.3"
+    },
+    "platform-dev": [
+
+    ]
+}
