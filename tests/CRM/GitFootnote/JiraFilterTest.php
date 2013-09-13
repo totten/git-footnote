@@ -21,6 +21,11 @@ class JiraFilterTest extends \PHPUnit_Framework_TestCase {
       array()
     );
     $cases[] = array(
+      "Hello world",
+      "Hello world",
+      array()
+    );
+    $cases[] = array(
       "CRM-1234",
       "CRM-1234 - http://example.com/jira/browse/CRM-1234",
       array()
@@ -44,6 +49,11 @@ class JiraFilterTest extends \PHPUnit_Framework_TestCase {
       "CRM-1234 Hello world",
       "CRM-1234 Hello world",
       array("CRM-1234:\n  http://example.com/jira/browse/CRM-1234")
+    );
+    $cases[] = array(
+      "fix CRM-1234",
+      "fix CRM-1234 - http://example.com/jira/browse/CRM-1234",
+      array(),
     );
     $cases[] = array(
       "CRM-1234 CRM-567",
