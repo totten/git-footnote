@@ -26,23 +26,23 @@ class JiraFilterTest extends \PHPUnit_Framework_TestCase {
       array()
     );
     $cases[] = array(
-      "Hello CRM-1234",
-      "Hello CRM-1234",
+      "Hello world CRM-1234",
+      "Hello world CRM-1234",
       array("CRM-1234:\n  http://example.com/jira/browse/CRM-1234")
     );
     $cases[] = array(
-      " Hello CRM-1234",
-      " Hello CRM-1234",
+      " Hello world CRM-1234",
+      " Hello world CRM-1234",
       array("CRM-1234:\n  http://example.com/jira/browse/CRM-1234")
     );
     $cases[] = array(
-      "Hello CRM-1234! ",
-      "Hello CRM-1234! ",
+      "Hello world CRM-1234! ",
+      "Hello world CRM-1234! ",
       array("CRM-1234:\n  http://example.com/jira/browse/CRM-1234")
     );
     $cases[] = array(
-      "CRM-1234 Hello",
-      "CRM-1234 Hello",
+      "CRM-1234 Hello world",
+      "CRM-1234 Hello world",
       array("CRM-1234:\n  http://example.com/jira/browse/CRM-1234")
     );
     $cases[] = array(
@@ -123,6 +123,18 @@ class JiraFilterTest extends \PHPUnit_Framework_TestCase {
     $cases[] = array(
       "CRM-1234",
       "CRM-1234 - Four digit ticket\n\nhttp://example.com/jira/browse/CRM-1234",
+      array(),
+      array($webResponses['CRM-1234'], $webResponses['schema'])
+    );
+    $cases[] = array(
+      "CRM-1234 fix",
+      "CRM-1234 fix - Four digit ticket\n\nhttp://example.com/jira/browse/CRM-1234",
+      array(),
+      array($webResponses['CRM-1234'], $webResponses['schema'])
+    );
+    $cases[] = array(
+      "fix CRM-1234",
+      "fix CRM-1234 - Four digit ticket\n\nhttp://example.com/jira/browse/CRM-1234",
       array(),
       array($webResponses['CRM-1234'], $webResponses['schema'])
     );
